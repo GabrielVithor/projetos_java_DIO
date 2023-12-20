@@ -69,7 +69,7 @@ public class ClienteNegocio {
         if (cliente.isPresent()){
             String opcao;
             System.out.println("Tem certeza que deseja excluir este cliente? [digite S para confirmar]");
-            opcao = LeitoraDados.lerDado();
+            opcao = LeitoraDados.lerDado().toUpperCase();
             if (opcao.equals("S")){
                 bancoDados.setCliente(null);
             }

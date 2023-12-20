@@ -102,7 +102,8 @@ public class Start {
                     produtoNegocio.listarTodos();
                     break;
                 case "8":
-                    //TODO Listar todos os Pedidos
+                    //TODO Listar todos os Pedidos - feito
+                    pedidoNegocio.listarTodos();
                     break;
                 case "9":
                     System.out.println(String.format("Volte sempre %s!", clienteLogado.getNome()));
@@ -137,11 +138,12 @@ public class Start {
 
             System.out.println("Usuário não cadastrado.");
             System.out.println("Deseja cadastrar um novo usuario? [S]/[N]");
-            opcao = LeitoraDados.lerDado();
+            opcao = LeitoraDados.lerDado().toUpperCase();
 
             if(opcao.equals("S")){
                 Cliente novoCliente = new Cliente();
                 clienteNegocio.cadastrarCliente(novoCliente);
+                clienteLogado = novoCliente;
             }else{
                 System.out.println("Sessão encerrada, até mais!");
                 System.exit(0);

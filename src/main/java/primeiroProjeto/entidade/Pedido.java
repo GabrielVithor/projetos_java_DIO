@@ -1,7 +1,4 @@
 package primeiroProjeto.entidade;
-
-import com.sun.org.apache.xpath.internal.operations.String;
-
 import java.util.ArrayList;
 import java.util.List;
 

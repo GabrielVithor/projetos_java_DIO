@@ -64,8 +64,10 @@ public class ProdutoNegocio {
             if(produtos.get(i).getCodigo().equals(codigo)){
                 produtos.remove(i);
                 i = produtos.size();
+                bancoDados.removerProduto(i);
                 itemRemovido = true;
                 System.out.println("Item removido com sucesso!");
+                break;
             }
         }
 
